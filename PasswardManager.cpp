@@ -37,5 +37,5 @@ class PasswordManager{
 
 
 void PasswordManager::saveToFile(){
-    
+    string ok;
 }
