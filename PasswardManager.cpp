@@ -290,6 +290,6 @@ int main() {
     PasswordManager pm;
     pm.LoginMainMenu(); // Start the application with the login main menu
     cout << "Thank you for using the Password Manager!" << endl;
-
+    cout << "Goodbye!" << endl;
     return 0;
 }
