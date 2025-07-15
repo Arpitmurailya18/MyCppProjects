@@ -159,10 +159,10 @@ void PasswordManager::searchUser() {
 
 void PasswordManager::LoginMainMenu(){
     // Implementation of the login main menu
+    cout << "Welcome to the Password Manager!" << endl;
     int choice;
     do{
-        cout << "Welcome to the Password Manager!" << endl;
-        cout <<"\n";
+        cout << "------------------------------" << endl;
         cout << "Please choose an option:" << endl;
         cout << "1. Register\n";
         cout << "2. Login\n";
