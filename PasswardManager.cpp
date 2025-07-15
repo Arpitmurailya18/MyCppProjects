@@ -237,8 +237,8 @@ void PasswordManager::login() {
 
 void PasswordManager::logout() {
     saveToFile();
-    LoginUserName.clear(); // Clear the username
-    LoginPassword.clear(); // Clear the password
+    LoginUserName = ""; // Clear the username
+    LoginPassword = ""; // Clear the password
     ListOfUsers.clear(); // Clear the user list
     cout << "Logged out successfully!" << endl;
 }
