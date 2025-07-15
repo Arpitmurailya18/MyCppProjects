@@ -150,7 +150,7 @@ void PasswordManager::searchUser() {
     for (const auto& user : ListOfUsers) {
         if (user.username == username) {
             cout << "User found!" << endl;
-            cout << user;
+            cout << user << "\n"; // Using the overloaded operator<< to display user details
             return;
         }
     }
@@ -159,9 +159,10 @@ void PasswordManager::searchUser() {
 
 void PasswordManager::LoginMainMenu(){
     // Implementation of the login main menu
-    cout << "Welcome to the Password Manager!" << endl;
+    
     int choice;
     do{
+        cout << "Welcome to the Password Manager!" << endl;
         cout << "------------------------------" << endl;
         cout << "Please choose an option:" << endl;
         cout << "1. Register\n";
@@ -192,11 +193,11 @@ void PasswordManager::registerUser() {
     string inputUserName, inputPassword;
     cout << "Register a new user" << endl;
     cout << "Enter username: ";
-    getline(cin, LoginUserName);
+    getline(cin, inputUserName);
     cout << "Enter password: ";
-    getline(cin, LoginPassword);
-    
-    ifstream file(LoginUserName + ".txt");
+    getline(cin, inputPassword);
+
+    ifstream file(inputUserName + ".txt");
     if(file.is_open()){
         cerr << "User already exists. Please choose a different username." << endl;
         file.close();
@@ -219,7 +220,6 @@ void PasswordManager::login() {
     if(file.is_open()) {
         file.close();
         LoginUserName = inputUserName;
-        getline(file, LoginUserName);
         LoadFromFile();
         cout << "Enter password: ";
         getline(cin, inputPassword);
