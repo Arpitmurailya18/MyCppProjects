@@ -279,7 +279,6 @@ void PasswordManager::MainMenu() {
                 logout();
                 break;
             case 7:
-                cout << "Exiting the Password Manager." << endl;
                 break;
             default:
                 cout << "Invalid choice. Please try again." << endl;
